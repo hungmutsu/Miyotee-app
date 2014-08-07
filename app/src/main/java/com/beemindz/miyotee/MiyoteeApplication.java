@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import com.beemindz.miyotee.dao.DaoMaster;
 import com.beemindz.miyotee.dao.DaoSession;
 
+import java.io.Console;
+
 /**
  * Created by Sony on 7/31/2014.
  */
@@ -30,6 +32,6 @@ public class MiyoteeApplication extends Application {
   }
 
   public void testGit() {
-
+    System.out.print("");
   }
 }
