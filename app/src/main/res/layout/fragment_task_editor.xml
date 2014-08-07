@@ -1,0 +1,220 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beemindz.miyotee.activity.TaskEditorFragment">
+
+  <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp" >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical" >
+
+      <EditText
+        android:id="@+id/etName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:background="@color/BLUE_00abc1"
+        android:ems="10"
+        android:gravity="center_vertical|center"
+        android:hint="@string/task_name"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/textColorHint"
+        android:textSize="30sp"
+        android:textStyle="bold" >
+
+        <requestFocus />
+      </EditText>
+
+      <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="120dp"
+        android:background="@color/BLUE_00aeef"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/task_description"
+        android:minLines="5"
+        android:scrollbars="vertical"
+        android:textColor="@color/White"
+        android:textSize="20sp" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@color/BLUE_0093d8" >
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="5dp"
+          android:gravity="left"
+          android:text="@string/tv_task_set_reminder"
+          android:textColor="@android:color/white"
+          android:textStyle="bold" />
+
+        <ToggleButton
+          android:id="@+id/tgbSetReminder"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:background="@color/BLUE_0093d8"
+          android:minHeight="64dip"
+          android:textColor="@android:color/white"
+          android:textStyle="bold" />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/layoutSelectDate"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/BLUE_0072bc"
+        android:gravity="center" >
+
+        <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="5dp"
+          android:text="@string/date"
+          android:textColor="@android:color/white"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/etDate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:gravity="center"
+          android:layout_centerHorizontal="true"
+          android:layout_toLeftOf="@+id/btnSelectDate"
+          android:layout_toRightOf="@+id/textView1"
+          android:textColor="@android:color/white"
+          android:textStyle="bold"/>
+
+        <ImageButton
+          android:id="@+id/btnSelectDate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:src="@drawable/ic_date_picker"
+          android:background="@color/BLUE_0072bc"
+          android:minHeight="64dip"
+          android:minWidth="64dip"
+          android:contentDescription="@string/app_name"/>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/layoutSelectTime"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/BLUE_005ead"
+        android:gravity="center" >
+
+        <TextView
+          android:id="@+id/textView2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="5dp"
+          android:text="@string/time"
+          android:textColor="@android:color/white"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/etTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:gravity="center"
+          android:layout_centerHorizontal="true"
+          android:layout_toLeftOf="@+id/btnSelectTime"
+          android:layout_toRightOf="@+id/textView2"
+          android:textColor="@android:color/white"
+          android:textStyle="bold"/>
+
+        <ImageButton
+          android:id="@+id/btnSelectTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:src="@drawable/ic_time_picker"
+          android:background="@color/BLUE_005ead"
+          android:minHeight="64dip"
+          android:minWidth="64dip"
+          android:contentDescription="@string/app_name"/>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="@color/BLUE_014fa3" >
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="5dp"
+          android:gravity="left"
+          android:text="@string/tv_task_set_complete"
+          android:textColor="@android:color/white"
+          android:textStyle="bold" />
+
+        <CheckBox
+          android:id="@+id/cbComplete"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:minWidth="55dip"
+          android:button="@drawable/custom_drawable_checkbox"/>
+
+      </RelativeLayout>
+
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/BLUE_223f99"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+          android:id="@+id/btnDeleteTask"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@color/BLUE_223f99"
+          android:drawableLeft="@drawable/ic_delete"
+          android:text="@string/menu_delete"
+          android:textColor="@android:color/white" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+  <LinearLayout
+    android:id="@+id/linearEditor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical" >
+  </LinearLayout>
+
+</FrameLayout>
