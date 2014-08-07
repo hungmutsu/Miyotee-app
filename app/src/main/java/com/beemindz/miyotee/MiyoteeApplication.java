@@ -30,8 +30,4 @@ public class MiyoteeApplication extends Application {
   public DaoSession getDaoSession() {
     return daoSession;
   }
-
-  public void testGit() {
-    System.out.print("");
-  }
 }
